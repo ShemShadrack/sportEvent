@@ -15,8 +15,8 @@ public class SemsConstants {
 	 * Database
 	 */
 	//Connection
-	private static final String JDBC_MYSQL_PROTOCOL = "jdbc:derby://localhost:1527/shem";
-	private static final String HOST   = "localhost";
+	private static final String JDBC_MYSQL_PROTOCOL = "jdbc:derby://";
+	private static final String HOST   = "localhost:1527";
 	private static final String DB 		= "shem";
 	private static final String DB_USERNAME 	= "torga";
 	private static final String DB_PASSWORD    = "torga";
@@ -26,9 +26,12 @@ public class SemsConstants {
 	private static final String SLASH 										= "/";
 	public static final String QUESTION 									= "?";
 	private static final String AND 										= "&";
+	private static final String SEMICOLON										= ";";
 	public static final String EQUAL 										= "=";
 	//URL
-	public static final String DATABASE_URL 								= "jdbc:derby://localhost:1527/shem";
+	public static final String DATABASE_URL 								= JDBC_MYSQL_PROTOCOL + HOST + SLASH + DB + 
+																				SEMICOLON + USER_EQUALS + DB_USERNAME + 
+																				SEMICOLON + PASSWORD_EQUALS + DB_PASSWORD;
 	
 	/**
 	 * Database Fields
