@@ -241,8 +241,8 @@ public class DBOperations {
             String user="torga";
             String pass="torga";
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection(jdbUrl,user,pass);
+			Class.forName(" org.apache.derby.jdbc.ClientDriver");
+			Connection con = DriverManager.getConnection(SemsConstants.DATABASE_URL);
                         if (con != null)             
                 System.out.println("Connected");            
                   else            
@@ -257,7 +257,7 @@ public class DBOperations {
 	}
 	
 	public static String getInsertUserQuery() {
-		return	"INSERT INTO users(userId, name, userType, gender, password) " + "VALUES (?,?,?,?,?)";
+		return	"INSERT INTO TORGA.USERS (USERID, \"NAME\", USERTYPE, GENDER, PASSWORD) \n" +" " + "VALUES (?,?,?,?,?)";
 	}
 	
 	private static String getInsertEventQuery() {
